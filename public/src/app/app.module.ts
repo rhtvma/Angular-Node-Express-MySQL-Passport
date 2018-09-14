@@ -8,8 +8,8 @@ import {AppRoutingModule} from './app-routing.module';
         AppComponent
     ],
     imports: [
-        BrowserModule,
-        AppRoutingModule
+        BrowserModule, AppRoutingModule
+
     ],
     providers: [],
     bootstrap: [AppComponent]
