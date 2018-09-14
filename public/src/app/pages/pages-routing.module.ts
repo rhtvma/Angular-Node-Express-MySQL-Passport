@@ -6,8 +6,20 @@ const routes: Routes = [
     {
         path: '',
         component: PagesComponent,
-        children: []
-    }
+        children: [
+            {
+                path: 'home',
+                loadChildren: './home/home.module#HomeModule'
+            },
+            {
+                path: 'about',
+                loadChildren: './about/about.module#AboutModule'
+            },
+            {
+                path: 'contact',
+                loadChildren: './contact/contact.module#ContactModule'
+            }]
+    },
 ];
 
 @NgModule({

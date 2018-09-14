@@ -1,11 +1,32 @@
 
 
-# Usefull Commands
+# Useful Commands
 cd public
 
 ng g module /pages --routing
 
 ng g component /pages
+
+
+# Install Bootstrap and FontAwesome
+
+use npm to install the dependencies:
+
+npm install bootstrap font-awesome --save
+
+dependencies are installed we can tell Angular CLI that it needs to load these styles
+
+One easy way to do this is by opening the file src/styles.css and adding the following lines:
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+@import "~font-awesome/css/font-awesome.css";
+
+
+
+
+
+
 
 
 
