@@ -1,0 +1,36 @@
+<aside class="left-sidebar">
+    <div class="scroll-sidebar">
+        <nav class="sidebar-nav">
+            <ul id="sidebarnav">
+                <li class="nav-small-cap">Sidebar Example</li>
+                <li [class.active]="showMenu === 'home'">
+                    <a routerLink="/home"
+                       [routerLinkActive]="['router-link-active']">
+                        <i class="mdi mdi-gauge"></i>
+                        <span class="hide-menu">home</span>
+                    </a>
+                </li>
+                <li [class.active]="showMenu === 'about'">
+                    <a routerLink="/about"
+                       [routerLinkActive]="['router-link-active']">
+                        <i class="mdi mdi-gauge"></i>
+                        <span class="hide-menu">about</span>
+                    </a>
+                </li>
+                <li [class.active]="showMenu === 'contact'">
+                    <a routerLink="/contact"
+                       [routerLinkActive]="['router-link-active']">
+                        <i class="mdi mdi-gauge"></i>
+                        <span class="hide-menu">contact</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- End Sidebar navigation -->
+    </div>
+    <!-- End Sidebar scroll-->
+    <!-- Bottom points-->
+    <div class="sidebar-footer">
+        <a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+    </div>
+</aside>

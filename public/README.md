@@ -1,6 +1,6 @@
 
-
 # Useful Commands
+
 cd public
 
 ng g module /pages --routing
@@ -10,51 +10,40 @@ ng g component /pages
 
 # Install Bootstrap and FontAwesome
 
-use npm to install the dependencies:
+* use npm to install the dependencies:
 
-npm install bootstrap font-awesome --save
+  npm install bootstrap font-awesome --save
 
-dependencies are installed we can tell Angular CLI that it needs to load these styles
+* Dependencies are installed we can tell Angular CLI that it needs to load these styles
 
-One easy way to do this is by opening the file src/styles.css and adding the following lines:
+  One easy way to do this is by opening the file src/styles.css and adding the following lines:
 
-@import "~bootstrap/dist/css/bootstrap.css";
+  * @import "~bootstrap/dist/css/bootstrap.css";
 
-@import "~font-awesome/css/font-awesome.css";
+  * @import "~font-awesome/css/font-awesome.css";
 
+
+# Install jQuery
 
 First install jQuery using npm as follows
 
-npm install jquery --save
+ * npm install jquery --save
 
 Second go to the ./angular-cli.json file at the root of your Angular CLI project folder, and find the scripts: [] property, and include the path to jQuery as follows
 
-"scripts": [ "../node_modules/jquery/dist/jquery.min.js" ]
+ * "scripts": [ "../node_modules/jquery/dist/jquery.min.js" ]
 
 
 Note: If you want to use bootstrap in your application or if you already have in your project, make sure to include jQuery before including the bootstrap javascript file as follows. Since bootstrap’s javascript file requires jQuery.
 
-"scripts": [ "../node_modules/jquery/dist/jquery.min.js",
+ * "scripts": [ "../node_modules/jquery/dist/jquery.min.js",
 
-"../node_modules/bootstrap/dist/js/bootstrap.js"]
+     "../node_modules/bootstrap/dist/js/bootstrap.js"]
 
 
 Now to use jQuery, all you have to do is to import it as follows in whatever component you want to use jQuery.
 
-import * as $ from 'jquery';
-
-
-
-
-
-
-
-
-
-
-
-
-
+ * import * as $ from 'jquery';
 
 
 

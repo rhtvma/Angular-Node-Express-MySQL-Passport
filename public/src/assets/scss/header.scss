@@ -1,0 +1,113 @@
+/*******************
+Main Header
+******************/
+
+#header {
+  position: fixed !important;
+  width: 100%;
+  z-index: 50;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+  .top-navbar {
+    min-height: 70px;
+    padding: 0px 15px 0 0;
+    .dropdown-toggle::after {
+      display: none;
+    }
+    .navbar-header {
+      line-height: 65px;
+      text-align: center;
+      .navbar-brand {
+        margin-right: 0px;
+        padding-bottom: 0px;
+        padding-top: 0px;
+        .light-logo {
+          display: none;
+        }
+        b {
+
+          line-height: 70px;
+          display: inline-block;
+        }
+      }
+    }
+    .navbar-nav > .nav-item > .nav-link {
+      padding-left: .75rem;
+      padding-right: .75rem;
+      font-size: 19px;
+      line-height: 50px;
+    }
+    .navbar-nav > .nav-item.show {
+      background: $dark-transparent;
+    }
+
+  }
+  .profile-pic {
+    width: 30px;
+    border-radius: 100%;
+  }
+  .dropdown-menu {
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    border-color: $border;
+    .dropdown-item {
+      padding: 7px 1.5rem;
+    }
+  }
+  ul.dropdown-user {
+    padding: 0px;
+    width: 270px;
+    li {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      &.divider {
+        height: 1px;
+        margin: 9px 0;
+        overflow: hidden;
+        background-color: $border;
+      }
+      .dw-user-box {
+        padding: 10px 15px;
+        .u-img {
+          width: 80px;
+          display: inline-block;
+          vertical-align: top;
+          img {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+        .u-text {
+          display: inline-block;
+          padding-left: 10px;
+          h4 {
+            margin: 0px;
+          }
+          p {
+            margin-bottom: 2px;
+            font-size: 14px;
+          }
+          .btn {
+            color: $white;
+            padding: 5px 10px;
+            display: inline-block;
+            &:hover {
+              background: $danger-dark;
+            }
+          }
+        }
+      }
+      a {
+        padding: 9px 15px;
+        display: block;
+        color: $bodytext;
+        &:hover {
+          background: $light;
+          color: $themecolor;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
