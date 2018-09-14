@@ -1,11 +1,12 @@
-# Angular5-Node-MySQL-Passport
-Angular5-Node-MySQL-Passport
+# Angular-Routing-With-Lazy-Loading
+Angular-Routing-With-Lazy-Loading
 
 # Public (Front-End)
 
 This /public folder contains Angular code 
 
+This code just contains Angular-Routing-With-Lazy-Loading example with static page.
 
-# Server (Back-End)
+For more detailed information please visit to :
 
-This /server folder contains Node.Js(Server) code 
+ * https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/master
