@@ -10,3 +10,8 @@ This /public folder contains Angular code
   https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/Angular-Routing-With-Lazy-Loading
 
 
+
+
+# Server (Back-End)
+
+This /server folder contains Node.Js(Server) code 
