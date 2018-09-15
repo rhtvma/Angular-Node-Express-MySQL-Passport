@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+@import "assets/scss/variable.scss";
 @import "assets/scss/pages.scss";
 @import "assets/scss/header.scss";
 @import "assets/scss/sidebar.scss";

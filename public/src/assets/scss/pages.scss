@@ -6,14 +6,25 @@
   width: 100%;
 }
 
+.page-wrapper {
+  background: $bodycolor;
+  padding-bottom: 60px;
+}
+
 .container-fluid {
   padding: 0 30px 25px 30px;
 }
 
-/*******************
- page title
-*******************/
-
-.page-titles {
-  padding-bottom: 20px;
+.fix-header {
+  .topbar {
+    position: fixed;
+    width: 100%;
+  }
+  .page-wrapper {
+    padding-top: 70px;
+  }
+  .right-side-panel {
+    top: 70px;
+    height: calc(100% - 70px);
+  }
 }

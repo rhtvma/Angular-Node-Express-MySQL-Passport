@@ -1,13 +1,14 @@
 /*******************
-Main Header
-******************/
+ Topbar
+*******************/
 
-#header {
-  position: fixed !important;
-  width: 100%;
+.topbar {
+  position: relative;
   z-index: 50;
+  background-color: #343a40;
   box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
   .top-navbar {
+    background-color: #2196f3;
     min-height: 70px;
     padding: 0px 15px 0 0;
     .dropdown-toggle::after {
@@ -24,7 +25,6 @@ Main Header
           display: none;
         }
         b {
-
           line-height: 70px;
           display: inline-block;
         }
@@ -108,6 +108,69 @@ Main Header
           text-decoration: none;
         }
       }
+    }
+  }
+}
+
+.fix-header {
+  .topbar {
+    position: fixed;
+    width: 100%;
+  }
+  .page-wrapper {
+    padding-top: 70px;
+  }
+  .right-side-panel {
+    top: 70px;
+    height: calc(100% - 70px);
+  }
+}
+
+.search-box {
+  .app-search {
+    position: absolute;
+    margin: 0px;
+    display: block;
+    z-index: 110;
+    width: 100%;
+    top: -1px;
+    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    left: 0px;
+    input {
+      width: 100%;
+      padding: 25px 40px 25px 20px;
+      border-radius: 0px;
+      font-size: 17px;
+      transition: 0.5s ease-in;
+    }
+    .srh-btn {
+      position: absolute;
+      top: 23px;
+      cursor: pointer;
+      background: $white;
+      width: 15px;
+      height: 15px;
+      right: 20px;
+      font-size: 14px;
+    }
+  }
+}
+
+.mini-sidebar .top-navbar {
+  .navbar-header {
+    width: 60px;
+    text-align: center;
+  }
+}
+
+.logo-center {
+  .top-navbar {
+    .navbar-header {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
     }
   }
 }
