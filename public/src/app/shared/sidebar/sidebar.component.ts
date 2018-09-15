@@ -1,26 +1,15 @@
-import {Component, OnInit, AfterViewInit} from '@angular/core';
-import {test1} from '../../../assets/javascript/demo';
-import * as $ from 'jquery';
+import { Component, OnInit } from '@angular/core';
+
 @Component({
-    selector: 'app-sidebar',
-    templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.css']
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent implements OnInit, AfterViewInit {
+export class SidebarComponent implements OnInit {
 
-    constructor() {
-    }
+  constructor() { }
 
-    ngOnInit() {
-        console.log(test1());
-    }
+  ngOnInit() {
+  }
 
-    ngAfterViewInit() {
-
-        $("#menu-close").click(function (e) {
-            e.preventDefault();
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("main").style.marginLeft = "0";
-        })
-    }
 }
