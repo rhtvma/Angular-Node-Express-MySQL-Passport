@@ -18,7 +18,12 @@ const routes: Routes = [
             {
                 path: 'contact',
                 loadChildren: './contact/contact.module#ContactModule'
-            }]
+            },
+            {
+                path: '**',
+                redirectTo: 'home'
+            }
+        ]
     },
 ];
 
