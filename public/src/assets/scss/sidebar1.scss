@@ -1,53 +1,28 @@
-/*
-Template Name: Material Pro Admin
-Author: Themedesigner
-Email: niravjoshi87@gmail.com
-File: scss
-*/
-
 /*******************
 Main sidebar
 ******************/
 
 .left-sidebar {
-  position: fixed;
+  position: fixed !important;
   width: 240px;
   height: 100%;
   top: 0px;
   z-index: 20;
-  padding-top: 20px;
-  background: $sidebar;
+  padding-top: 70px;
+  /*background: $sidebar;*/
   box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
 }
 
 .fix-sidebar .left-sidebar {
-  position: fixed;
+  position: relative;
 }
+
+/*******************
+use profile section
+******************/
 
 /*******************
 sidebar footer
-******************/
-
-.sidebar-footer {
-  position: fixed;
-  z-index: 10;
-  bottom: 0px;
-  left: 0px;
-  transition: 0.2s ease-out;
-  width: 240px;
-  background: $sidebar;
-  border-top: 1px solid $border;
-  a {
-    padding: 15px;
-    width: 33.333337%;
-    float: left;
-    text-align: center;
-    font-size: 18px;
-  }
-}
-
-/*******************
-sidebar navigation
 ******************/
 
 .scroll-sidebar {
