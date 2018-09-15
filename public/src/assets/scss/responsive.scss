@@ -26,10 +26,10 @@
  ============================================================== */
 
 @media(min-width: 1024px) {
-  .page-wrapper {
+  .page-wrapper, .topbar {
     margin-left: 240px;
-
   }
+
   .footer {
     left: 240px;
   }
@@ -40,6 +40,9 @@
   .page-wrapper {
     margin-left: 60px;
     transition: 0.2s ease-in;
+  }
+  .topbar {
+    margin-left: 60px;
   }
   .footer {
     left: 60px;
