@@ -6,6 +6,11 @@
   width: 100%;
 }
 
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
 .page-wrapper {
   background: $bodycolor;
   padding-bottom: 60px;
