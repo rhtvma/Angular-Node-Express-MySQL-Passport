@@ -10,6 +10,10 @@ This /public folder contains Angular code
   https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/Angular-Routing-With-Lazy-Loading
 
 
+* Angular-Sidebar 
+
+  https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/Angular-Sidebar
+
 
 
 # Server (Back-End)
