@@ -1,7 +1,8 @@
 const router = require('express').Router();
+const usersController = require('../../controllers/users');
 
-router.get('getAllUsers', (req, res, next) => {
-    console.log(`getAllUsers`);
-});
+
+// http://localhost:3000/api/users/getAllUsers
+router.get('/getAllUsers', usersController.getAllUsers);
 
 module.exports = router;
