@@ -1,0 +1,10 @@
+/.idea
+/nbproject
+/node_modules
+/HTML5Application/nbproject
+/uploads
+uploads/
+
+server/node_modules/
+
+admin/node_modules/
