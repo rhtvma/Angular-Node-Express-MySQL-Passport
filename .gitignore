@@ -1,3 +1,4 @@
 
 *.xml
 server/package-lock.json
+.idea/workspace.xml
