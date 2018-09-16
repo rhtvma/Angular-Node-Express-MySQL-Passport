@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6454a0ee-1085-40f5-9794-c2125d719498" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/controllers/login/auth.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/controllers/login/loginCtr.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/controllers/login/passport.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/controllers/users.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/services/helper.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/server/package-lock.json" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,11 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="passport.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="passport.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/controllers/login/passport.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2596">
               <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="88">
+              <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -115,13 +120,13 @@
         <option value="$PROJECT_DIR$/public/README.md" />
         <option value="$PROJECT_DIR$/server/config/default.json" />
         <option value="$PROJECT_DIR$/server/controllers/autoUploader.js" />
-        <option value="$PROJECT_DIR$/server/package.json" />
         <option value="$PROJECT_DIR$/server/services/helper.js" />
         <option value="$PROJECT_DIR$/server/controllers/users.js" />
         <option value="$PROJECT_DIR$/server/controllers/login/passport.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/routes/api/autoUploaderRoute.js" />
         <option value="$PROJECT_DIR$/server/routes/api/index.js" />
+        <option value="$PROJECT_DIR$/server/package.json" />
       </list>
     </option>
   </component>
@@ -437,12 +442,12 @@
       <option name="presentableId" value="Default" />
       <updated>1536904599635</updated>
       <workItem from="1536904601414" duration="14405000" />
-      <workItem from="1537116248540" duration="3164000" />
+      <workItem from="1537116248540" duration="3537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17651000" />
+    <option name="totallyTimeSpent" value="18024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -795,16 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="14" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <marker date="1537118968788" expanded="true" signature="646:1239" ph="{&quot;archiver&quot;: &quot;^3.0.0&quot;...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/services/helper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -873,6 +868,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2596">
           <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="15" column="69" lean-forward="false" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
           <folding />
         </state>
       </provider>
