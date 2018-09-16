@@ -1,4 +1,3 @@
-
 /*******************
 Main sidebar
 ******************/
@@ -22,6 +21,7 @@ Main sidebar
 sidebar footer
 ******************/
 
+/*
 .sidebar-footer {
   position: fixed;
   z-index: 10;
@@ -39,11 +39,12 @@ sidebar footer
     font-size: 18px;
   }
 }
+*/
 
 /*******************
 sidebar navigation
 ******************/
-
+/*
 .scroll-sidebar {
   padding-bottom: 60px;
 
@@ -170,116 +171,12 @@ sidebar navigation
   width: .58em;
   transform: rotate(-135deg) translate(0, -50%);
 }
+*/
 
 /****************
 When click on sidebar toggler and also for tablet
 *****************/
-
-@media(min-width: 768px) {
-  .mini-sidebar .sidebar-nav #sidebarnav li {
-    position: relative;
-  }
-  .mini-sidebar .sidebar-nav #sidebarnav > li > ul {
-    position: absolute;
-    left: 60px;
-    top: 45px;
-    width: 200px;
-    z-index: 1001;
-    background: $sidebar-alt;
-    display: none;
-    padding-left: 1px;
-  }
-  .mini-sidebar .sidebar-nav {
-    padding: 5px;
-  }
-  .mini-sidebar.fix-sidebar .left-sidebar {
-    position: absolute;
-  }
-  .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul {
-    height: auto !important;
-
-    overflow: auto;
-  }
-  .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul,
-  .mini-sidebar .sidebar-nav #sidebarnav > li:hover > ul.collapse {
-    display: block;
-  }
-  .mini-sidebar .sidebar-nav #sidebarnav > li > a.has-arrow:after {
-    display: none;
-  }
-  .mini-sidebar {
-    .left-sidebar {
-      width: 60px;
-    }
-    .user-profile {
-      padding-bottom: 15px;
-      width: 60px;
-      margin-bottom: 7px;
-      .profile-img {
-        padding: 15px 0 0 0;
-        margin: 0px 0 0 6px;
-        &:before {
-          top: 15px;
-        }
-      }
-    }
-    .scroll-sidebar {
-      padding-bottom: 0px;
-      position: absolute;
-    }
-    .hide-menu,
-    .nav-small-cap,
-    .sidebar-footer,
-    .user-profile .profile-text {
-      display: none;
-    }
-    .nav-devider {
-      width: 50px;
-    }
-    .sidebar-nav {
-      background: transparent;
-    }
-    .sidebar-nav #sidebarnav > li > a {
-      padding: 9px 15px;
-      width: 50px;
-    }
-    .sidebar-nav #sidebarnav > li:hover > a {
-      width: 260px;
-      background: $themecolor-alt;
-      color: $white;
-      border-color: $themecolor;
-      i {
-        color: $white;
-      }
-      .hide-menu {
-        display: inline;
-      }
-    }
-    .sidebar-nav #sidebarnav > li.active > a {
-      border-color: transparent;
-      &.active {
-        border-color: $themecolor;
-      }
-    }
-  }
-}
-
-@media(max-width: 767px) {
-  .mini-sidebar {
-    .left-sidebar {
-      position: fixed;
-    }
-    .left-sidebar, .sidebar-footer {
-      left: -240px;
-    }
-    &.show-sidebar {
-      .left-sidebar, .sidebar-footer {
-        left: 0px;
-      }
-    }
-  }
-}
-
+/*
 .sidebar-nav .navigation li > a, .off-canvas-sidebar .navigation li > a {
   display: block;
   overflow: hidden;
@@ -291,3 +188,85 @@ When click on sidebar toggler and also for tablet
   -webkit-transition: all 300ms linear;
   transition: all 300ms linear;
 }
+*/
+
+.main_sidebar {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 300ms cubic-bezier(0.65, 0.05, 0.36, 1);
+  will-change: left, width;
+  box-shadow: inset -1px 0 10px rgba(0, 0, 0, 0.4);
+  background: $sidebar;
+}
+
+.main_sidebar:after {
+  content: '';
+  background-color: #253238;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+}
+
+.main_sidebar ul {
+  list-style: none;
+  padding-left: 58px;
+}
+
+.main_sidebar ul li {
+  padding: 10px;
+}
+
+.main_sidebar ul li a {
+  color: #fff;
+  display: block;
+}
+
+.main_sidebar ul li i {
+  float: left;
+  color: grey;
+  margin-left: -58px;
+  font-size: 24px;
+  padding-left: 7px;
+}
+
+.main_sidebar ul li:hover {
+  background: #167696;
+}
+
+.main_sidebar ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_sidebar ul li:hover i {
+  color: #fff;
+}
+
+.main_sidebar ul li.active {
+  background: #0f4698;
+}
+
+.main_sidebar ul li.active i {
+  color: #fff;
+}
+
+.main_sidebar ul li.active:hover {
+  background: #167696;
+}
+
+.main_sidebar ul li.active:hover i {
+  color: #fff;
+}
+
+.main {
+  float: right;
+  color: #fff;
+  display: block;
+  width: 100%;
+  background: red;
+  min-height: 100vh;
+}
+
