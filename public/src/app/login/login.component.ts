@@ -9,7 +9,7 @@ import {ActivatedRoute, Router} from '@angular/router';
     selector: 'login-form',
     templateUrl: './login.form.html',
     styleUrls: ['./login.component.css'],
-    // providers: [ToastrService]
+    providers: [ToastrService]
 })
 export class LoginFormComponent implements OnInit {
 
@@ -52,7 +52,8 @@ export class LoginFormComponent implements OnInit {
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
-    styleUrls: ['./login.component.css']
+    styleUrls: ['./login.component.css'],
+    providers: [ToastrService]
 })
 
 export class LoginComponent implements OnInit, AfterViewInit {
@@ -63,8 +64,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
     constructor(private _authService: AuthService,
                 private router: Router,
-                // private _toastrService: ToastrService
-    ) {
+                private _toastrService: ToastrService) {
     }
 
     ngOnInit() {
@@ -98,12 +98,12 @@ export class LoginComponent implements OnInit, AfterViewInit {
                 .subscribe(
                     (data: { data: any, response: string, response_message: Array<any> }) => {
                         if (data.response === 'success') {
-                            // this._toastrService.typeSuccess(data.response_message);
+                            this._toastrService.typeSuccess(data.response_message);
                             this.router.navigate(['home']);
                         }
                     },
                     (error) => {
-                        // this._toastrService.typeError(error.error.response_message || error.status_text);
+                        this._toastrService.typeError(error.error.response_message || error.status_text);
                         this.router.navigate(['login']);
                     });
         }
