@@ -19,3 +19,11 @@ This /public folder contains Angular code
 # Server (Back-End)
 
 This /server folder contains Node.Js(Server) code 
+
+
+# Database
+
+import database from /database folder
+
+ * username: 12345@gmail.com
+ * password: 12345

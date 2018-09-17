@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6454a0ee-1085-40f5-9794-c2125d719498" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/src/assets/css/login.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/src/assets/css/shared.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/src/assets/css/signup.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/server/routes/api/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/.angular-cli.json" afterPath="$PROJECT_DIR$/public/.angular-cli.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/package.json" afterPath="$PROJECT_DIR$/public/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/app.module.ts" afterPath="$PROJECT_DIR$/public/src/app/app.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/login/login.component.css" afterPath="$PROJECT_DIR$/public/src/app/login/login.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/login/login.component.html" afterPath="$PROJECT_DIR$/public/src/app/login/login.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/login/login.component.ts" afterPath="$PROJECT_DIR$/public/src/app/login/login.component.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/login/login.form.html" afterPath="$PROJECT_DIR$/public/src/app/login/login.form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/login/login.module.ts" afterPath="$PROJECT_DIR$/public/src/app/login/login.module.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/shared/auth/auth.service.ts" afterPath="$PROJECT_DIR$/public/src/app/shared/auth/auth.service.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/signup/signup.component.css" afterPath="$PROJECT_DIR$/public/src/app/signup/signup.component.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/app/signup/signup.component.html" afterPath="$PROJECT_DIR$/public/src/app/signup/signup.component.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/src/styles.css" afterPath="$PROJECT_DIR$/public/src/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/api/index.js" afterPath="$PROJECT_DIR$/server/routes/api/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/api/users.js" afterPath="$PROJECT_DIR$/server/routes/api/users.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,7 +14,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.component.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/src/app/login/login.component.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
@@ -40,6 +22,19 @@
               <folding>
                 <element signature="e#0#74#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="245">
+                <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -59,16 +54,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/routes/api/users.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="48" lean-forward="false" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -216,7 +201,6 @@
         <option value="$PROJECT_DIR$/public/src/app/pages/home/portfolio/portfolio.component.css" />
         <option value="$PROJECT_DIR$/public/src/app/pages/home/home.component.html" />
         <option value="$PROJECT_DIR$/public/.gitignore" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/README.md" />
         <option value="$PROJECT_DIR$/server/controllers/autoUploader.js" />
         <option value="$PROJECT_DIR$/server/services/helper.js" />
@@ -255,6 +239,7 @@
         <option value="$PROJECT_DIR$/public/.angular-cli.json" />
         <option value="$PROJECT_DIR$/public/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/public/src/app/login/login.component.ts" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -849,12 +834,12 @@
       <workItem from="1536904601414" duration="14405000" />
       <workItem from="1537116248540" duration="7461000" />
       <workItem from="1537160093481" duration="21572000" />
-      <workItem from="1537196586723" duration="5952000" />
+      <workItem from="1537196586723" duration="6153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49472000" />
+    <option name="totallyTimeSpent" value="49673000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -906,7 +891,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/server/config/passport.js" />
     <entry file="file://$PROJECT_DIR$/server/controllers/autoUploader.js" />
     <entry file="file://$PROJECT_DIR$/server/process.json" />
     <entry file="file://$PROJECT_DIR$/server/services/helper.js">
@@ -1278,6 +1262,17 @@
           <folding>
             <element signature="e#0#74#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="245">
+            <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
