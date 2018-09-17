@@ -12,7 +12,7 @@ export class PagesComponent implements OnInit {
 
     ngOnInit() {
         if (this.router.url === '/') {
-            this.router.navigate(['/login']);
+            this.router.navigate(['/signup']);
         }
     }
 }
