@@ -5,7 +5,7 @@
 
 export const environment = {
     production: false,
-    serverBase: "http://localhost:3000",
+    serverBase: "http://localhost:3001",
     inSecureApi: "/api",
     secureApi: "/auth",
     endpoints: {

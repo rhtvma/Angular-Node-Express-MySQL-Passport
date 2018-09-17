@@ -95,6 +95,6 @@ app.use((err, req, res, next) => {
 });
 
 // let's start our server...
-const server = app.listen(process.env.PORT || 3000, () => {
+const server = app.listen(process.env.PORT || 3001, () => {
     console.log(`Server running at http://localhost:${server.address().port}/`);
 });

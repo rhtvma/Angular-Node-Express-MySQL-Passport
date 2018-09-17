@@ -1,6 +1,6 @@
 export const environment = {
     production: true,
-    serverBase: "http://localhost:3000",
+    serverBase: "http://localhost:3001",
     inSecureApi: "/api",
     secureApi: "/auth",
     endpoints: {
