@@ -1,6 +1,5 @@
 <form novalidate
       [formGroup]="myform">
-    <!--<input type="text" id="login" class="fadeIn second" name="login" placeholder="login">-->
     <div class="form-group"
          [ngClass]="{
         'has-danger': email.invalid && (email.dirty || email.touched),
@@ -20,7 +19,6 @@
         <!--<pre>Valid? {{ myform.controls.email.valid }}</pre>-->
         <!--<pre>Dirty? {{ myform.controls.email.dirty }}</pre>-->
     </div>
-    <!--<input type="text" id="password" class="fadeIn third" name="login" placeholder="password">-->
     <div class="form-group"
          [ngClass]=" {
         'has-danger': password.invalid && (password.dirty || password.touched),
@@ -40,7 +38,6 @@
                 characters </p>
         </div>
     </div>
-    <input type="submit" class="fadeIn fourth" value="Log In">
 </form>
 
 

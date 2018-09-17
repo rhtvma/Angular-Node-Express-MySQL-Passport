@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
-
+import {AuthService} from '../shared/auth/auth.service';
 import {LoginRoutingModule} from './login-routing.module';
 import {LoginComponent, ModelFormComponent} from './login.component';
 
@@ -12,7 +12,8 @@ import {LoginComponent, ModelFormComponent} from './login.component';
         FormsModule,
         ReactiveFormsModule
     ],
-    declarations: [LoginComponent, ModelFormComponent]
+    declarations: [LoginComponent, ModelFormComponent],
+    providers: [AuthService]
 })
 export class LoginModule {
 }
