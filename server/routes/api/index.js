@@ -1,5 +1,6 @@
 var router = require('express').Router();
 
+router.use('/login', require('./login'));
 router.use('/users', require('./users'));
 
 router.use((err, req, res, next) => {

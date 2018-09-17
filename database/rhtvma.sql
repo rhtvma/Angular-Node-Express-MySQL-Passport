@@ -45,9 +45,10 @@ CREATE TABLE `users` (
   `what_best_describes_you` varchar(512) DEFAULT NULL,
   `modified_on` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `created_on` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -56,6 +57,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'12345@gmail.com','12345','Rohit',NULL,'Verma','user',0,'$2a$10$avUwqC/2ijyZ7uFW5ZgBcu69/8xRrtfvvFd7bsZOXNyfOIg7wLWj.','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-17 16:05:34','2018-09-17 21:35:34',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -76,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-17  0:04:25
+-- Dump completed on 2018-09-17 22:14:37

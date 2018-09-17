@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import 'rxjs/add/operator/map';
+// import {Observable} from 'rxjs/Observable';
+import {Observable} from 'rxjs/Rx';
 import {environment} from '../../../environments/environment';
-import {Observable} from 'rxjs/Observable';
 import * as _ from 'lodash';
 
 @Injectable()
@@ -21,6 +22,7 @@ export class AuthService {
     }
 
     signinUser(username: string, password: string) {
+        debugger;
         const body = {
             'username': username,
             'password': password

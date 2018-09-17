@@ -1,67 +1,92 @@
-<section class="testimonial py-5" id="testimonial">
-    <div class="container">
+<section class="testimonial py-5 fadeInDown" id="testimonial">
+    <div class="container " id="signupContent">
         <div class="row ">
             <div class="col-md-4 py-5 bg-primary text-white text-center ">
-                <div class=" ">
-                    <div class="card-body">
-                        <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
-                        <h2 class="py-3">Registration</h2>
-                        <p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu,
-                            facete detracto patrioque an per, lucilius pertinacia eu vel.
-                        </p>
-                    </div>
+                <div class="card-body">
+                    <img src="http://www.ansonika.com/mavia/img/registration_bg.svg" style="width:30%">
+                    <h2 class="py-3">Registration</h2>
+                    <p>Tation argumentum et usu, dicit viderer evertitur te has. Eu dictas concludaturque usu,
+                        facete detracto patrioque an per, lucilius pertinacia eu vel.
+                    </p>
                 </div>
+                <a class="underlineHover" routerLink="/login">Already have an account? Sign In</a>
             </div>
             <div class="col-md-8 py-5 border">
                 <h4 class="pb-4">Please fill with your details</h4>
-                <a routerLink="/login">Already hav account ? Login</a>
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input id="Full Name" name="Full Name" placeholder="Full Name" class="form-control"
-                                   type="text">
+                            <input type="text"
+                                   class="fadeIn"
+                                   id="firstname"
+                                   name="firstname" placeholder="First Name">
                         </div>
                         <div class="form-group col-md-6">
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                            <input type="text"
+                                   class="fadeIn"
+                                   id="lastname"
+                                   name="lastname"
+                                   placeholder="Last Name">
+                        </div>
+
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text"
+                                   class="fadeIn"
+                                   id="username"
+                                   placeholder="Username">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="email"
+                                   class="fadeIn"
+                                   id="email"
+                                   placeholder="Email">
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
-                            <input id="Mobile No." name="Mobile No." placeholder="Mobile No." class="form-control"
-                                   required="required" type="text">
+                            <input type="password"
+                                   class="fadeIn"
+                                   id="password"
+                                   name="password" placeholder="password">
                         </div>
                         <div class="form-group col-md-6">
-                            <select id="inputState" class="form-control">
-                                <option selected>Choose ...</option>
-                                <option> New Buyer</option>
-                                <option> Auction</option>
-                                <option> Complaint</option>
-                                <option> Feedback</option>
+                            <input type="password"
+                                   class="fadeIn"
+                                   id="cpassword" placeholder="Confirm password">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="text"
+                                   class="fadeIn"
+                                   id="Mobile No." name="Mobile No." placeholder="Mobile No.">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <select id="sex"
+                                    class="fadeIn">
+                                <option selected>Choose you sex</option>
+                                <option>male</option>
+                                <option>female</option>
                             </select>
                         </div>
-                        <!--<div class="form-group col-md-12">-->
-                        <!--<textarea id="comment" name="comment" cols="40" rows="5" class="form-control"></textarea>-->
-                        <!--</div>-->
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <div class="form-group">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck2"
-                                           required>
-                                    <label class="form-check-label" for="invalidCheck2">
-                                        <small>By clicking Submit, you agree to our Terms & Conditions, Visitor
-                                            Agreement and Privacy Policy.
-                                        </small>
-                                    </label>
-                                </div>
+                            <div class="form-check">
+                                <input class="fadeIn" type="checkbox" value="" id="invalidCheck2"
+                                       required>
+                                <label class="form-check-label" for="invalidCheck2">
+                                    <small>By clicking Submit, you agree to our Terms & Conditions, Visitor
+                                        Agreement and Privacy Policy.
+                                    </small>
+                                </label>
                             </div>
-
                         </div>
                     </div>
-
                     <div class="form-row">
-                        <button type="button" class="btn btn-danger">Submit</button>
+                        <input type="submit" class="fadeIn" value="Submit">
                     </div>
                 </form>
             </div>
