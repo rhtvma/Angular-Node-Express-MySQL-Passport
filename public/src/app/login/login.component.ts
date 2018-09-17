@@ -40,6 +40,10 @@ export class ModelFormComponent implements OnInit {
 
     onSubmit() {
         console.log('you submitted value: ', this.myform.value);
+        debugger;
+        const formData = this.myform["controls"];
+        formData['email'].markAsTouched(true);
+        formData['password'].markAsTouched(true);
     }
 
 }
@@ -71,9 +75,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
     onSubmit() {
         this.loginFormData.onSubmit();
-        // const formData = this.model.controls.userFormDetails["controls"];
-        // formData['internal_tcm_id'].markAsTouched(true);
-        // formData['name'].markAsTouched(true);
+        // debugger;
+        // const formData = this.model.controls.myform["controls"];
+        // formData['email'].markAsTouched(true);
+        // formData['password'].markAsTouched(true);
     }
 
     login() {
