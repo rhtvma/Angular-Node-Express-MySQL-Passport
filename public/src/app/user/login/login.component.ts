@@ -3,7 +3,7 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AuthService} from '../../shared/auth/auth.service';
 // import {ToastrService} from '../../shared/services/toastr.service';
 import {ActivatedRoute, Router} from '@angular/router';
-import {LoginFormComponent} from './form/login-form.component';
+import {LoginFormComponent} from './login-form/login-form.component';
 
 @Component({
     selector: 'app-login',
@@ -15,7 +15,6 @@ import {LoginFormComponent} from './form/login-form.component';
 export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
     @ViewChild(LoginFormComponent) loginFormData;
-    loginForm: any;
     model: any;
 
     constructor(private _authService: AuthService,
@@ -33,7 +32,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     ngAfterViewInit() {
-        this.model = this.loginFormData.myform;
+        this.model = this.loginFormData.loginForm;
     }
 
     onSubmit() {

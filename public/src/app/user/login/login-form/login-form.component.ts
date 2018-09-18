@@ -12,7 +12,7 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 })
 export class LoginFormComponent implements OnInit {
 
-    myform: FormGroup;
+    loginForm: FormGroup;
     email: FormControl;
     password: FormControl;
 
@@ -33,15 +33,15 @@ export class LoginFormComponent implements OnInit {
     }
 
     createForm() {
-        this.myform = new FormGroup({
+        this.loginForm = new FormGroup({
             email: this.email,
             password: this.password
         });
     }
 
     onSubmit() {
-        console.log('you submitted value: ', this.myform.value);
-        const formData = this.myform["controls"];
+        console.log('you submitted value: ', this.loginForm.value);
+        const formData = this.loginForm["controls"];
         formData['email'].markAsTouched();
         formData['password'].markAsTouched();
     }

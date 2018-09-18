@@ -3,7 +3,7 @@ import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {LoginRoutingModule} from './login-routing.module';
 import {LoginComponent} from './login.component';
-import {LoginFormComponent} from './form/login-form.component';
+import {LoginFormComponent} from './login-form/login-form.component';
 
 @NgModule({
     imports: [
