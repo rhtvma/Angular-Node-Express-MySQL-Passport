@@ -14,6 +14,9 @@ This /public folder contains Angular code
 
   https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/Angular-Sidebar
 
+* Angular-Form-Validation 
+
+  https://github.com/rhtvma/Angular-Node-MySQL-Passport/tree/Angular-Form-Validation
 
 
 # Server (Back-End)
@@ -27,3 +30,30 @@ import database from /database folder
 
  * username: 12345@gmail.com
  * password: 12345
+ 
+ 
+ 
+ 
+ # How to Run
+ 
+   Note: make sure node and git is installed on your system.
+     
+   * Step 1 : goto /databse folder and import rhtvma.sql in your machine
+   * Step 2 : goto /server and run npm install and then run run node server.js
+
+   * Step 3 : goto /public and run npm install
+              then run ng serve
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
