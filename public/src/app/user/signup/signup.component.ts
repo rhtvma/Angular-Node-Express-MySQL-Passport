@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {AuthService} from '../shared/auth/auth.service';
-import {ToastrService} from '../shared/services/toastr.service';
+import {AuthService} from '../../shared/auth/auth.service';
+import {ToastrService} from '../../shared/services/toastr.service';
 import {ActivatedRoute, Router} from '@angular/router';
 @Component({
     selector: 'app-signup',

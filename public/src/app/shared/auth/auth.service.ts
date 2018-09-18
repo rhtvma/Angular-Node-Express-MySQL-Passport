@@ -105,7 +105,7 @@ export class AuthService {
         if (localStorage.getItem('token')) {
             return true;
         }
-        this._router.navigate(['/login']);
+        this._router.navigate(['/user/login']);
         return false;
     }
 

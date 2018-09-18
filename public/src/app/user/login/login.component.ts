@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewInit, OnDestroy} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
-import {AuthService} from '../shared/auth/auth.service';
-import {ToastrService} from '../shared/services/toastr.service';
+import {AuthService} from '../../shared/auth/auth.service';
+import {ToastrService} from '../../shared/services/toastr.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {LoginFormComponent} from './form/login-form.component';
 
@@ -64,7 +64,7 @@ export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
                     },
                     (error) => {
                         this._toastrService.typeError(error.error.response_message || error.status_text);
-                        this.router.navigate(['login']);
+                        this.router.navigate(['/user/login']);
                     });
         }
     }
