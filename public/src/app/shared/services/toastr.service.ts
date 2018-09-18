@@ -16,4 +16,21 @@ export class ToastrService {
     typeError(message) {
         this.toastr.error(message, 'Error!');
     }
+
+    //Dismiss toastr on Click
+    dismissToastOnClick(val1, val2) {
+        this.toastr.info(val1, val2, {dismiss: 'click', enableHTML: true});
+    }
+
+    // Custom Type
+    typeCustom() {
+        this.toastr.custom('<span style="color: red">Message in red.</span>', null, {enableHTML: true});
+    }
+
+    // Remove current toasts using animation
+    clearToast() {
+        this.toastr.clearAllToasts();
+    }
+
+
 }

@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
+import {Component, OnInit, ViewChild, AfterViewInit, OnDestroy} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AuthService} from '../shared/auth/auth.service';
 import {ToastrService} from '../shared/services/toastr.service';
@@ -12,7 +12,7 @@ import {LoginFormComponent} from './form/login-form.component';
     providers: [ToastrService]
 })
 
-export class LoginComponent implements OnInit, AfterViewInit {
+export class LoginComponent implements OnInit, AfterViewInit, OnDestroy {
 
     @ViewChild(LoginFormComponent) loginFormData;
     loginForm: any;
@@ -24,6 +24,8 @@ export class LoginComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+        this._toastrService.clearToast();
+        this._toastrService.dismissToastOnClick(`Username: 12345@gmail.com, Password: 12345`, `Credentials`);
         if (this._authService.isLoggedIn()) {
             this.router.navigate(['home']);
         }
@@ -35,6 +37,10 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
     onSubmit() {
         this.loginFormData.onSubmit();
+    }
+
+    ngOnDestroy() {
+        this._toastrService.clearToast();
     }
 
     login() {
