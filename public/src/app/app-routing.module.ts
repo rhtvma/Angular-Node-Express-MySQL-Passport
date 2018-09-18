@@ -5,10 +5,14 @@ const routes: Routes = [
     {
         path: '',
         loadChildren: './pages/pages.module#PagesModule',
-        // canActivate: [AuthGuardService]
+        canActivate: [AuthGuardService]
     },
     {
         path: 'login',
+        loadChildren: './login/login.module#LoginModule'
+    },
+    {
+        path: 'logout',
         loadChildren: './login/login.module#LoginModule'
     },
     {

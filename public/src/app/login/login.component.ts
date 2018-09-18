@@ -3,7 +3,6 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AuthService} from '../shared/auth/auth.service';
 import {ToastrService} from '../shared/services/toastr.service';
 import {ActivatedRoute, Router} from '@angular/router';
-// import {AuthenticationService, DataService, ToastrService} from '../../_services/index';
 import {LoginFormComponent} from './form/login-form.component';
 
 @Component({
@@ -25,7 +24,9 @@ export class LoginComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
-
+        if (this._authService.isLoggedIn()) {
+            this.router.navigate(['home']);
+        }
     }
 
     ngAfterViewInit() {
@@ -34,10 +35,6 @@ export class LoginComponent implements OnInit, AfterViewInit {
 
     onSubmit() {
         this.loginFormData.onSubmit();
-        // debugger;
-        // const formData = this.model.controls.myform["controls"];
-        // formData['email'].markAsTouched(true);
-        // formData['password'].markAsTouched(true);
     }
 
     login() {

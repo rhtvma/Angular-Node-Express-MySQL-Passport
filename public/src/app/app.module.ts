@@ -8,6 +8,8 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import {ToastModule} from 'ng2-toastr/ng2-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AuthService} from './shared/auth/auth.service'
+import {AuthGuardService} from './shared/auth/auth-guard.service'
 
 @NgModule({
     declarations: [
@@ -22,10 +24,13 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         HttpClientModule,
         ToastModule.forRoot()
     ],
-    providers: [{
-        provide: LocationStrategy,
-        useClass: HashLocationStrategy
-    }],
+    providers: [
+        AuthService,
+        AuthGuardService,
+        {
+            provide: LocationStrategy,
+            useClass: HashLocationStrategy
+        }],
     bootstrap: [AppComponent]
 })
 export class AppModule {

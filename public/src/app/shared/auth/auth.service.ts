@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import 'rxjs/add/operator/map';
+import {ActivatedRoute, Router} from '@angular/router';
 // import {Observable} from 'rxjs/Observable';
 import {Observable} from 'rxjs/Rx';
 import {environment} from '../../../environments/environment';
@@ -12,7 +13,7 @@ export class AuthService {
     serverPath: string;
     serverBase: string;
 
-    constructor(private _http: HttpClient) {
+    constructor(private _http: HttpClient, private _router: Router) {
         this.serverPath = environment.serverBase + environment.inSecureApi;
         this.serverBase = environment.serverBase;
     }
@@ -75,6 +76,7 @@ export class AuthService {
     }
 
     getUserInfo() {
+        debugger;
         const userToken = this.getToken();
         if (userToken) {
             let payload = userToken.split('.')[1];
@@ -82,7 +84,7 @@ export class AuthService {
             payload = JSON.parse(payload);
             return payload;
         }
-        return false;
+        return null;
     }
 
     getRole(): string {
@@ -94,12 +96,17 @@ export class AuthService {
         }
     }
 
-    getToken() {
-        return this.token;
+    getToken(): string {
+        return localStorage.getItem('token');
     }
 
+
     isAuthenticated() {
-        return true;
+        if (localStorage.getItem('token')) {
+            return true;
+        }
+        this._router.navigate(['/login']);
+        return false;
     }
 
     _errorHandler(error: Response) {
