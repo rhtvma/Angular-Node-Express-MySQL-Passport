@@ -2,40 +2,30 @@ import {HttpClient, HttpHeaders, HttpErrorResponse} from "@angular/common/http";
 import {Injectable} from "@angular/core";
 import {environment} from "../../../environments/environment";
 import {NgxSpinnerService} from 'ngx-spinner';
-import {Observable} from 'rxjs/Rx';
+import {Observable} from 'rxjs'
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable()
 export class HttpService {
     private secureServerBase: string;
     private headers: HttpHeaders;
 
-    constructor(private _http: HttpClient, private _spinner: NgxSpinnerService) {
+    constructor(private _http: HttpClient,
+                private _spinner: NgxSpinnerService) {
         this.secureServerBase = environment.serverBase + environment.secureApi;
         this.headers = new HttpHeaders({'Content-Type': 'application/json'});
     }
 
-    get(url) {
+    get(url): Observable<any> {
         const token = localStorage.getItem('token');
-        const options = {
-            headers: new HttpHeaders().set('Authorization', 'bearer ' + token)
-        };
+        const headers = new HttpHeaders()
+            .set('Authorization', 'bearer ' + token)
+            .set('Content-Type', 'application/json');
         this._spinner.show();
-        return this._http.get(
-            this.secureServerBase + url,
-            options
-        ).map(response => {
-            this._spinner.hide();
-            if (response) {
-                return response;
-            }
-        }).catch((error: HttpErrorResponse) => {
-            this._spinner.hide();
-            console.log(error);
-            return Observable.throw(error || 'Internal server error');
-        });
+        return this._http.get(this.secureServerBase + url, {headers: headers})
     }
 
-    post = (url: String, data: any) => {
+    post(url: String, data: any): Observable<any> {
         this._spinner.show();
         const token = localStorage.getItem('token');
         const headers = new HttpHeaders()
@@ -47,7 +37,7 @@ export class HttpService {
         return this._http.post(apiEndpoint, data, {headers: headers});
     };
 
-    put = (url: String, data: any) => {
+    put(url: String, data: any): Observable<any> {
         this._spinner.show();
         let token = localStorage.getItem('token');
         const headers = new HttpHeaders()
@@ -59,7 +49,7 @@ export class HttpService {
         return this._http.put(apiEndpoint, data, {headers: headers});
     };
 
-    delete = (url: String, id: any) => {
+    delete(url: String, id: any): Observable<any> {
         this._spinner.show();
         let token = localStorage.getItem('token');
         const headers = new HttpHeaders()

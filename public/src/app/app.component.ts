@@ -1,5 +1,5 @@
 import {Component, ViewContainerRef} from '@angular/core';
-import {ToastsManager} from 'ng2-toastr';
+// import {ToastsManager} from 'ng2-toastr';
 
 @Component({
     selector: 'app-root',
@@ -9,12 +9,14 @@ import {ToastsManager} from 'ng2-toastr';
 export class AppComponent {
     title = 'app';
 
-    private viewContainerRef: ViewContainerRef;
+    // private viewContainerRef: ViewContainerRef;
 
-    public constructor(public toastr: ToastsManager, viewContainerRef: ViewContainerRef) {
-        // You need this small hack in order to catch application root view container ref (ng2-bootstrap)
-        this.viewContainerRef = viewContainerRef;
-        this.toastr.setRootViewContainerRef(viewContainerRef);
-    }
+    public constructor(){}
+
+    //     public constructor(public toastr: ToastsManager, viewContainerRef: ViewContainerRef) {
+    //     // You need this small hack in order to catch application root view container ref (ng2-bootstrap)
+    //     this.viewContainerRef = viewContainerRef;
+    //     this.toastr.setRootViewContainerRef(viewContainerRef);
+    // }
 
 }

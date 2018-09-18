@@ -6,7 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
-import {ToastModule} from 'ng2-toastr/ng2-toastr';
+// import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthService} from './shared/auth/auth.service'
 import {AuthGuardService} from './shared/auth/auth-guard.service'
@@ -22,7 +22,7 @@ import {AuthGuardService} from './shared/auth/auth-guard.service'
         AppRoutingModule,
         HttpModule,
         HttpClientModule,
-        ToastModule.forRoot()
+        // ToastrModule.forRoot()
     ],
     providers: [
         AuthService,

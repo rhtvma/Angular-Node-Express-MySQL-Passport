@@ -1,9 +1,8 @@
 import {Injectable} from '@angular/core';
-import {HttpClient, HttpHeaders} from '@angular/common/http';
-import 'rxjs/add/operator/map';
+import {catchError, map, tap} from 'rxjs/operators';
 import {ActivatedRoute, Router} from '@angular/router';
-// import {Observable} from 'rxjs/Observable';
-import {Observable} from 'rxjs/Rx';
+import {Observable} from 'rxjs'
+import {HttpClient, HttpHeaders, HttpErrorResponse} from "@angular/common/http";
 import {environment} from '../../../environments/environment';
 import * as _ from 'lodash';
 
@@ -22,7 +21,7 @@ export class AuthService {
 
     }
 
-    signinUser(username: string, password: string) {
+    signinUser(username: string, password: string): Observable<any> {
         debugger;
         const body = {
             'username': username,
@@ -32,21 +31,37 @@ export class AuthService {
             headers: new HttpHeaders()
                 .set('Content-Type', 'application/json')
         };
+        // return this._http.post <any>(
+        //     this.serverPath + '/login',
+        //     body,
+        //     options
+        // ).map(
+        //     (data: { data: any, response: string, response_message: Array<any> }) => {
+        //         if (data.response === 'success') {
+        //             if (data && data.data) {
+        //                 localStorage.setItem('token', data.data);
+        //             }
+        //             return data;
+        //         }
+        //     })
+        //     .catch(error => Observable.throw(error || 'Internal server error'));
+
         return this._http.post <any>(
             this.serverPath + '/login',
             body,
             options
-        ).map(
-            (data: { data: any, response: string, response_message: Array<any> }) => {
-                if (data.response === 'success') {
-                    if (data && data.data) {
-                        localStorage.setItem('token', data.data);
+        ).pipe(
+            tap(
+                (data: { data: any, response: string, response_message: Array<any> }) => {
+                    if (data.response === 'success') {
+                        if (data && data.data) {
+                            localStorage.setItem('token', data.data);
+                        }
+                        return data;
                     }
-                    return data;
-                }
-            })
-            .catch(error => Observable.throw(error || 'Internal server error')
-            );
+                }),
+            catchError(error => Observable.throw(error || 'Internal server error'))
+        );
     }
 
     isLoggedIn(): boolean {
@@ -54,7 +69,7 @@ export class AuthService {
         return (isLoggedIn ? true : false);
     }
 
-    logout() {
+    logout(): void {
         if (this.isLoggedIn()) {
             localStorage.removeItem('token');
             const options = {
@@ -62,14 +77,14 @@ export class AuthService {
                     .set('Authorization', 'bearer ' + this.getToken())
                     .set('Content-Type', 'application/json')
             };
-            return this._http.get(
-                this.serverBase + '/auth/logout',
-                options
-            ).map(response => {
-                if (response) {
-                    return response;
-                }
-            }).catch(this._errorHandler);
+            // return this._http.get(
+            //     this.serverBase + '/auth/logout',
+            //     options
+            // ).map(response => {
+            //     if (response) {
+            //         return response;
+            //     }
+            // }).catch(this._errorHandler);
         }
         localStorage.removeItem('token');
         this.token = null;
