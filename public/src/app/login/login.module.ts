@@ -2,7 +2,8 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule, FormsModule} from '@angular/forms';
 import {LoginRoutingModule} from './login-routing.module';
-import {LoginComponent, LoginFormComponent} from './login.component';
+import {LoginComponent} from './login.component';
+import {LoginFormComponent} from './form/login-form.component';
 
 @NgModule({
     imports: [

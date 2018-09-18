@@ -4,50 +4,7 @@ import {AuthService} from '../shared/auth/auth.service';
 import {ToastrService} from '../shared/services/toastr.service';
 import {ActivatedRoute, Router} from '@angular/router';
 // import {AuthenticationService, DataService, ToastrService} from '../../_services/index';
-
-@Component({
-    selector: 'login-form',
-    templateUrl: './login.form.html',
-    styleUrls: ['./login.component.css'],
-    providers: [ToastrService]
-})
-export class LoginFormComponent implements OnInit {
-
-    myform: FormGroup;
-    email: FormControl;
-    password: FormControl;
-
-    ngOnInit() {
-        this.createFormControls();
-        this.createForm();
-    }
-
-    createFormControls() {
-        this.email = new FormControl('', [
-            Validators.required,
-            Validators.pattern("[^ @]*@[^ @]*")
-        ]);
-        this.password = new FormControl('', [
-            Validators.required,
-            Validators.minLength(5)
-        ]);
-    }
-
-    createForm() {
-        this.myform = new FormGroup({
-            email: this.email,
-            password: this.password
-        });
-    }
-
-    onSubmit() {
-        console.log('you submitted value: ', this.myform.value);
-        const formData = this.myform["controls"];
-        formData['email'].markAsTouched();
-        formData['password'].markAsTouched();
-    }
-
-}
+import {LoginFormComponent} from './form/login-form.component';
 
 @Component({
     selector: 'app-login',
