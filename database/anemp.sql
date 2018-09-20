@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `rhtvma` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `rhtvma`;
+CREATE DATABASE  IF NOT EXISTS `anemp` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `anemp`;
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
 -- Host: 127.0.0.1    Database: rhtvma
@@ -57,7 +57,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'12345@gmail.com','12345','Rohit',NULL,'Verma','user',0,'$2a$10$avUwqC/2ijyZ7uFW5ZgBcu69/8xRrtfvvFd7bsZOXNyfOIg7wLWj.','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-17 16:05:34','2018-09-17 21:35:34',1);
+INSERT INTO `users` VALUES (1,'12345@gmail.com','12345','Deep',NULL,'Chand','user',0,'$2a$10$avUwqC/2ijyZ7uFW5ZgBcu69/8xRrtfvvFd7bsZOXNyfOIg7wLWj.','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-17 16:05:34','2018-09-17 21:35:34',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
