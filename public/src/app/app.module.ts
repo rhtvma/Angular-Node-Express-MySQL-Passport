@@ -6,7 +6,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {HttpClientModule} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
-// import {ToastrModule} from 'ngx-toastr';
+import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AuthService} from './shared/auth/auth.service'
 import {AuthGuardService} from './shared/auth/auth-guard.service'
@@ -17,12 +17,13 @@ import {AuthGuardService} from './shared/auth/auth-guard.service'
     ],
     imports: [
         BrowserModule,
-        BrowserAnimationsModule,
+        BrowserAnimationsModule, // ToastrModule required animations module
+        ToastrModule.forRoot(), // ToastrModule added
         FormsModule,
         AppRoutingModule,
         HttpModule,
-        HttpClientModule,
-        // ToastrModule.forRoot()
+        HttpClientModule
+
     ],
     providers: [
         AuthService,

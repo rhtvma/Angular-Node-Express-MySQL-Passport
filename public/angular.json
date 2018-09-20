@@ -78,7 +78,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.js"
             ],
             "styles": [
-              "node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
+              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "assets": [

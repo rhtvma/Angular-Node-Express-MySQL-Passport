@@ -9,7 +9,7 @@ const bcrypt = require('bcryptjs');
 const config = require('config');
 
 // Register user via admin
-exports.createUser = (req, res) => {
+exports.signup = (req, res) => {
     const email = req.body.email,
         username = req.body.username,
         password = req.body.password,

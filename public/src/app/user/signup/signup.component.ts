@@ -1,7 +1,7 @@
 import {Component, OnInit, ViewChild, AfterViewInit} from '@angular/core';
 import {FormGroup, FormControl, Validators} from '@angular/forms';
 import {AuthService} from '../../shared/auth/auth.service';
-// import {ToastrService} from '../../shared/services/toastr.service';
+import {ToastrMessageService} from '../../shared/services/toastr-message.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SignupFormComponent} from './signup-form/signup-form.component';
 
@@ -9,7 +9,8 @@ import {SignupFormComponent} from './signup-form/signup-form.component';
 @Component({
     selector: 'app-signup',
     templateUrl: './signup.component.html',
-    styleUrls: ['./signup.component.css']
+    styleUrls: ['./signup.component.css'],
+    providers: [ToastrMessageService]
 })
 export class SignupComponent implements OnInit, AfterViewInit {
 
@@ -17,7 +18,8 @@ export class SignupComponent implements OnInit, AfterViewInit {
     model: any;
 
     constructor(private _authService: AuthService,
-                private _router: Router) {
+                private _router: Router,
+                private _toastrMessageService: ToastrMessageService) {
     }
 
     ngAfterViewInit() {
@@ -29,6 +31,33 @@ export class SignupComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit() {
+
+    }
+
+    signup() {
+        if (!this.model.valid) {
+            this.onSubmit();
+            console.log("Form is invalid!");
+            return;
+        }
+        let data = this.model["controls"];
+        debugger;
+        const body = {
+            'username': username,
+            'password': password
+        };
+        this._authService.signupUser(body)
+            .subscribe(
+                (data: { data: any, response: string, response_message: Array<any> }) => {
+                    if (data.response === 'success') {
+                        this._toastrMessageService.typeSuccess(data.response_message);
+                        this._router.navigate(['/user/login']);
+                    }
+                },
+                (error) => {
+                    this._toastrMessageService.typeError(error.error.response_message || error.status_text);
+                    this._router.navigate(['/user/signup']);
+                });
 
     }
 }

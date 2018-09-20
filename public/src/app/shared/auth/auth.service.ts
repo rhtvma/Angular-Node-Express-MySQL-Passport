@@ -17,8 +17,27 @@ export class AuthService {
         this.serverBase = environment.serverBase;
     }
 
-    signupUser(email: string, password: string) {
-
+    signupUser(body) {
+        const options = {
+            headers: new HttpHeaders()
+                .set('Content-Type', 'application/json')
+        };
+        return this._http.post <any>(
+            this.serverPath + '/signup',
+            body,
+            options
+        ).pipe(
+            tap(
+                (data: { data: any, response: string, response_message: Array<any> }) => {
+                    if (data.response === 'success') {
+                        // if (data && data.data) {
+                        //     localStorage.setItem('token', data.data);
+                        // }
+                        // return data;
+                    }
+                }),
+            catchError(error => Observable.throw(error || 'Internal server error'))
+        );
     }
 
     signinUser(username: string, password: string): Observable<any> {
@@ -31,21 +50,6 @@ export class AuthService {
             headers: new HttpHeaders()
                 .set('Content-Type', 'application/json')
         };
-        // return this._http.post <any>(
-        //     this.serverPath + '/login',
-        //     body,
-        //     options
-        // ).map(
-        //     (data: { data: any, response: string, response_message: Array<any> }) => {
-        //         if (data.response === 'success') {
-        //             if (data && data.data) {
-        //                 localStorage.setItem('token', data.data);
-        //             }
-        //             return data;
-        //         }
-        //     })
-        //     .catch(error => Observable.throw(error || 'Internal server error'));
-
         return this._http.post <any>(
             this.serverPath + '/login',
             body,
