@@ -1,5 +1,5 @@
-# Angular(6)-Node-MySQL-Passport
-Angular(6)-Node-MySQL-Passport
+# Angular(6)-Node-Express-MySQL-Passport
+Angular(6)-Node-Express-MySQL-Passport (Under Development- Basic functionalities are working)
 
 # Public (Front-End)
 
