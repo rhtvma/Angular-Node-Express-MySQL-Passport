@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6454a0ee-1085-40f5-9794-c2125d719498" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/database/rhtvma.sql" afterPath="$PROJECT_DIR$/database/anemp.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/config/default.json" afterPath="$PROJECT_DIR$/server/config/default.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -82,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="anemp.sql" pinned="false" current-in-tab="true">
+      <file leaf-file-name="anemp.sql" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/anemp.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="308">
@@ -112,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="default.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/config/default.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="176">
-              <caret line="8" column="4" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
+              <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -195,7 +195,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/src/app/signup/signup.component.css" />
         <option value="$PROJECT_DIR$/public/src/assets/css/signup.css" />
         <option value="$PROJECT_DIR$/public/src/app/login/login.component.html" />
         <option value="$PROJECT_DIR$/public/src/app/login/login.form.html" />
@@ -246,6 +245,7 @@
         <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/database/anemp.sql" />
+        <option value="$PROJECT_DIR$/server/config/default.json" />
       </list>
     </option>
   </component>
@@ -313,7 +313,25 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular-Node-MySQL-Passport" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angular-Node-MySQL-Passport" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="server" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -502,12 +520,12 @@
       <workItem from="1537334666964" duration="4964000" />
       <workItem from="1537346385491" duration="46000" />
       <workItem from="1537421641084" duration="4174000" />
-      <workItem from="1537433356797" duration="3174000" />
+      <workItem from="1537433356797" duration="3566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89480000" />
+    <option name="totallyTimeSpent" value="89872000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-249" width="1936" height="1066" extended-state="0" />
@@ -899,14 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/config/default.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="4" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/src/app/user/signup/signup.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -948,6 +958,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="59" column="74" lean-forward="false" selection-start-line="59" selection-start-column="74" selection-end-line="59" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/config/default.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
           <folding />
         </state>
       </provider>
