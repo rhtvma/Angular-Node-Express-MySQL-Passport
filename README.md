@@ -72,7 +72,7 @@ import database from /database folder
               
               run **ng build**  for production mode use this
                             
-              then just hit **http://localhost:3001/**
+              then just hit **http://localhost:3001/** (this will work only after **Step 2**)
               
 
  
