@@ -46,6 +46,7 @@ import database from /database folder
               run **npm install** 
               run **node server.js**
               
+              Server running at http://localhost:3001/
               
               goto **/server/config/default.json**
               
@@ -62,6 +63,8 @@ import database from /database folder
    * Step 3 : goto /public 
               run **npm install**
               run **ng serve**
+              
+              Angular running at http://localhost:4200/
 
  
  
