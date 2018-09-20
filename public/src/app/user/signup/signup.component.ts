@@ -43,8 +43,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
         let data = this.model["controls"];
         debugger;
         const body = {
-            'username': username,
-            'password': password
+
         };
         this._authService.signupUser(body)
             .subscribe(
