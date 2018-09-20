@@ -56,9 +56,9 @@ import database from /database folder
                   "connectionLimit": 5,
                   "host": "127.0.0.1",
                   "port": 3306,
-                  "user": "username",
-                  "password": "password",
-                  "database": "database"
+                  "user": "root",
+                  "password": "root",
+                  "database": "anemp"
                 },
 
    * Step 3 : goto /public 
