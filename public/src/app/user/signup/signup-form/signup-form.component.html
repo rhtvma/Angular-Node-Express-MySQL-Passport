@@ -65,7 +65,7 @@
             <div class="form-control-feedback"
                  *ngIf="email.errors && (email.dirty || email.touched)">
                 <p *ngIf="email.errors.required">Email is required</p>
-                <p *ngIf="password.errors.pattern">The email address must contain at least the @ character</p>
+                <p *ngIf="email.errors.pattern">The email address must contain at least the @ character</p>
             </div>
         </div>
     </div>
@@ -97,13 +97,13 @@
                    class="fadeIn"
                    name="cpassword"
                    id="cpassword"
-                   placeholder="cpassword"
+                   placeholder="Confirm password"
                    formControlName="cpassword"
                    required>
             <div class="form-control-feedback"
                  *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)">
-                <p *ngIf="cpassword.errors.required">CPassword is required</p>
-                <p *ngIf="cpassword.errors.minlength">CPassword must be 5 characters long, we need another
+                <p *ngIf="cpassword.errors.required">Confirm Password is required</p>
+                <p *ngIf="cpassword.errors.minlength">Confirm Password must be 5 characters long, we need another
                     {{cpassword.errors.minlength.requiredLength - cpassword.errors.minlength.actualLength}}
                     characters </p>
             </div>
@@ -112,9 +112,13 @@
     </div>
     <div class="form-row">
         <div class="form-group col-md-6">
-            <input type="text"
+            <input type="number"
                    class="fadeIn"
-                   id="Mobile No." name="Mobile No." placeholder="Mobile No.">
+                   name="mobile"
+                   id="mobile"
+                   placeholder="mobile - (Optional)"
+                   formControlName="mobile"
+                   >
         </div>
         <div class="form-group col-md-6">
             <select id="sex"

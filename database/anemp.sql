@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `anemp` /*!40100 DEFAULT CHARACTER SET latin1 */;
 USE `anemp`;
 -- MySQL dump 10.13  Distrib 5.7.12, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: rhtvma
+-- Host: 127.0.0.1    Database: anemp
 -- ------------------------------------------------------
 -- Server version	5.5.5-10.1.26-MariaDB
 
@@ -48,7 +48,7 @@ CREATE TABLE `users` (
   `status` tinyint(1) DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `email_UNIQUE` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -57,16 +57,16 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'12345@gmail.com','12345','Deep',NULL,'Chand','user',0,'$2a$10$avUwqC/2ijyZ7uFW5ZgBcu69/8xRrtfvvFd7bsZOXNyfOIg7wLWj.','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-17 16:05:34','2018-09-17 21:35:34',1);
+INSERT INTO `users` VALUES (1,'12345@gmail.com','12345','Deep',NULL,'Chand','user',0,'$2a$10$avUwqC/2ijyZ7uFW5ZgBcu69/8xRrtfvvFd7bsZOXNyfOIg7wLWj.','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-17 16:05:34','2018-09-17 21:35:34',1),(2,'rhtvma@outlook.com','rhtvma','Rohit',NULL,'Verma','user',0,'$2a$10$yP5KYRg1kotQJR2J2WtqSOMyKcC3r5IZ701tPIcvrRpvSyEm61zJi','user',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'2018-09-20 11:49:19','2018-09-20 17:19:19',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
--- Dumping events for database 'rhtvma'
+-- Dumping events for database 'anemp'
 --
 
 --
--- Dumping routines for database 'rhtvma'
+-- Dumping routines for database 'anemp'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -78,4 +78,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-09-17 22:14:37
+-- Dump completed on 2018-09-20 17:20:35

@@ -19,6 +19,7 @@ export class SignupFormComponent implements OnInit {
     password: FormControl;
     cpassword: FormControl;
     username: FormControl;
+    mobile: FormControl;
 
     ngOnInit() {
         this.createFormControls();
@@ -27,12 +28,10 @@ export class SignupFormComponent implements OnInit {
 
     createFormControls() {
         this.firstname = new FormControl('', [
-            Validators.required,
-            Validators.pattern("[^ @]*@[^ @]*")
+            Validators.required
         ]);
         this.lastname = new FormControl('', [
-            Validators.required,
-            Validators.pattern("[^ @]*@[^ @]*")
+            Validators.required
         ]);
         this.email = new FormControl('', [
             Validators.required,
@@ -49,6 +48,7 @@ export class SignupFormComponent implements OnInit {
         this.username = new FormControl('', [
             Validators.required
         ]);
+        this.mobile = new FormControl('');
     }
 
     createForm() {
@@ -58,14 +58,19 @@ export class SignupFormComponent implements OnInit {
             email: this.email,
             password: this.password,
             cpassword: this.cpassword,
-            username: this.username
+            username: this.username,
+            mobile: this.mobile
         });
     }
 
     onSubmit() {
         console.log('you submitted value: ', this.signupForm.value);
         const formData = this.signupForm["controls"];
+        formData['firstname'].markAsTouched();
+        formData['lastname'].markAsTouched();
+        formData['username'].markAsTouched();
         formData['email'].markAsTouched();
         formData['password'].markAsTouched();
+        formData['cpassword'].markAsTouched();
     }
 }

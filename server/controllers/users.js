@@ -13,9 +13,8 @@ exports.signup = (req, res) => {
     const email = req.body.email,
         username = req.body.username,
         password = req.body.password,
-        first_name = req.body.first_name,
-        last_name = req.body.last_name,
-        userType = req.body.user_type,
+        first_name = req.body.firstname,
+        last_name = req.body.lastname,
         hash = bcrypt.hashSync(password, 10);
     async.waterfall([
             async.apply((callback) => {
@@ -34,8 +33,8 @@ exports.signup = (req, res) => {
             }),
             async.apply((isUserValid, callback) => {
                 if (isUserValid) {
-                    let insQuery = 'INSERT INTO users (email, username, hash, user_type,first_name,last_name) values (?,?,?,?,?,?)';
-                    DB.executeQuery(insQuery, [email, username, hash, userType, first_name, last_name], (err, rows) => {
+                    let insQuery = 'INSERT INTO users (email, username, hash, first_name,last_name) values (?,?,?,?,?)';
+                    DB.executeQuery(insQuery, [email, username, hash, first_name, last_name], (err, rows) => {
                         if (err) {
                             callback({
                                 data: err,
