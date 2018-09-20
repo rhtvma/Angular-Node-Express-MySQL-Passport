@@ -36,7 +36,7 @@ import database from /database folder
  
  # How to Run
  
-   Note: make sure node and git is installed on your system.
+   Note: make sure #node and #git is installed on your system.
      
    * Step 1 : goto /databse folder and import rhtvma.sql in your machine
    
@@ -65,9 +65,15 @@ import database from /database folder
    
               run **npm install**
               
-              run **ng serve**
+              run **ng serve** for development mode/debugging use this
               
               Angular running at http://localhost:4200/
+              
+              
+              run **ng build**  for production mode use this
+                            
+              then just hit **http://localhost:3001/**
+              
 
  
  
