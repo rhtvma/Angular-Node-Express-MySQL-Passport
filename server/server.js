@@ -19,7 +19,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 // Create global app object
 let app = express();
 app.use(cors());
-app.use(express.static(__dirname + '/../dist'));
+app.use(express.static(__dirname + '/../public/dist'));
 app.use(cookieParser());
 app.set('jwtTokenSecret', '123456ABCDEF');
 app.use(bodyParser.json());
