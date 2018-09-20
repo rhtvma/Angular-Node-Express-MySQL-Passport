@@ -1,6 +1,9 @@
 # Angular(6)-Node-Express-MySQL-Passport
 Angular(6)-Node-Express-MySQL-Passport (Under Development- Basic functionalities are working)
 
+# Project Screenshots
+
+![alt text](https://github.com/rhtvma/Angular-Node-Express-MySQL-Passport/blob/master/database/Screenshots/loginPage.png)
 
 
 # Public (Front-End)
