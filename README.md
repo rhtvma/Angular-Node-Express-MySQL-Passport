@@ -1,5 +1,5 @@
-# Angular(6)-Node-Express-MySQL-Passport
-Angular(6)-Node-Express-MySQL-Passport (Under Development- Basic functionalities are working)
+# Angular(6)-Php
+Angular(6)-Php (Under Development- Basic functionalities are working)
 
 # Project Screenshots
 
@@ -26,7 +26,7 @@ This /public folder contains Angular code
 
 # Server (Back-End)
 
-This /server folder contains Node.Js(Server) code 
+This /server folder contains php code 
 
 
 # Database
@@ -43,30 +43,10 @@ import database from /database folder
  
    Note: make sure #node and #git is installed on your system.
      
-   * Step 1 : goto /databse folder and import rhtvma.sql in your machine
+   * Step 1 : goto /database folder and import anemp.sql in your machine
    
-   
-   * Step 2 : goto /server 
-              
-              run **npm install** 
-              
-              run **node server.js**
-              
-              Server running at http://localhost:3001/
-              
-              goto **/server/config/default.json**
-              
-              Update your databse configurationshere
-               "mysql": {
-                  "connectionLimit": 5,
-                  "host": "127.0.0.1",
-                  "port": 3306,
-                  "user": "root",
-                  "password": "root",
-                  "database": "anemp"
-                },
 
-   * Step 3 : goto /public 
+   * Step 2 : goto /public 
    
               run **npm install**
               
@@ -74,10 +54,6 @@ import database from /database folder
               
               Angular running at http://localhost:4200/
               
-              
-              run **ng build**  for production mode use this
-                            
-              then just hit **http://localhost:3001/** (this will work only after **Step 2**)
               
 
  
