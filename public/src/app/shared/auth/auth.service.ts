@@ -1,10 +1,11 @@
 import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs'
 import {catchError, map, tap} from 'rxjs/operators';
 import {ActivatedRoute, Router} from '@angular/router';
-import {Observable} from 'rxjs'
 import {HttpClient, HttpHeaders, HttpErrorResponse} from "@angular/common/http";
 import {environment} from '../../../environments/environment';
 import * as _ from 'lodash';
+import {HttpService} from '../services/http.service';
 
 @Injectable()
 export class AuthService {
@@ -12,32 +13,16 @@ export class AuthService {
     serverPath: string;
     serverBase: string;
 
-    constructor(private _http: HttpClient, private _router: Router) {
+    constructor(private _http: HttpClient,
+                private _router: Router,
+                private _httpService: HttpService) {
         this.serverPath = environment.serverBase + environment.inSecureApi;
         this.serverBase = environment.serverBase;
     }
 
-    signupUser(body) {
-        const options = {
-            headers: new HttpHeaders()
-                .set('Content-Type', 'application/json')
-        };
-        return this._http.post <any>(
-            this.serverPath + '/signup',
-            body,
-            options
-        ).pipe(
-            tap(
-                (data: { data: any, response: string, response_message: Array<any> }) => {
-                    if (data.response === 'success') {
-                        // if (data && data.data) {
-                        //     localStorage.setItem('token', data.data);
-                        // }
-                        // return data;
-                    }
-                }),
-            catchError(error => Observable.throw(error || 'Internal server error'))
-        );
+
+    signupUser(body: any): Observable<any> {
+        return this._httpService.post(this.serverPath + '/api/signup', body);
     }
 
     signinUser(username: string, password: string): Observable<any> {
@@ -46,15 +31,7 @@ export class AuthService {
             'username': username,
             'password': password
         };
-        const options = {
-            headers: new HttpHeaders()
-                .set('Content-Type', 'application/json')
-        };
-        return this._http.post <any>(
-            this.serverPath + '/login',
-            body,
-            options
-        ).pipe(
+        return this._httpService.post('/api/login', body).pipe(
             tap(
                 (data: { data: any, response: string, response_message: Array<any> }) => {
                     if (data.response === 'success') {

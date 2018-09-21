@@ -4,7 +4,8 @@ import {AuthService} from '../../shared/auth/auth.service';
 import {ToastrMessageService} from '../../shared/services/toastr-message.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {SignupFormComponent} from './signup-form/signup-form.component';
-
+import {Observable} from 'rxjs'
+import {catchError, map, tap} from 'rxjs/operators';
 
 @Component({
     selector: 'app-signup',
@@ -34,7 +35,7 @@ export class SignupComponent implements OnInit, AfterViewInit {
 
     }
 
-    signup() {
+    signup(): void {
         if (!this.model.valid) {
             this.onSubmit();
             console.log("Form is invalid!");

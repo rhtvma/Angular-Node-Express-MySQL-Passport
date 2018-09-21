@@ -4,12 +4,15 @@ import {FormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {HttpModule} from '@angular/http';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {HttpService} from './shared/services/http.service'
 import {AuthService} from './shared/auth/auth.service'
 import {AuthGuardService} from './shared/auth/auth-guard.service'
+import {TokenInterceptorService} from './shared/services/token-interceptor.service'
+
 
 @NgModule({
     declarations: [
@@ -26,11 +29,17 @@ import {AuthGuardService} from './shared/auth/auth-guard.service'
 
     ],
     providers: [
+        HttpService,
         AuthService,
         AuthGuardService,
         {
             provide: LocationStrategy,
             useClass: HashLocationStrategy
+        },
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: TokenInterceptorService,
+            multi: true
         }],
     bootstrap: [AppComponent]
 })
