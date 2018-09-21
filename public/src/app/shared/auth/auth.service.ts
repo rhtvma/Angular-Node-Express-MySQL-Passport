@@ -10,19 +10,15 @@ import {HttpService} from '../services/http.service';
 @Injectable()
 export class AuthService {
     token: string;
-    serverPath: string;
-    serverBase: string;
 
     constructor(private _http: HttpClient,
                 private _router: Router,
                 private _httpService: HttpService) {
-        this.serverPath = environment.serverBase + environment.inSecureApi;
-        this.serverBase = environment.serverBase;
     }
 
 
     signupUser(body: any): Observable<any> {
-        return this._httpService.post(this.serverPath + '/api/signup', body);
+        return this._httpService.post('/api/signup', body);
     }
 
     signinUser(username: string, password: string): Observable<any> {
@@ -31,18 +27,19 @@ export class AuthService {
             'username': username,
             'password': password
         };
-        return this._httpService.post('/api/login', body).pipe(
-            tap(
-                (data: { data: any, response: string, response_message: Array<any> }) => {
-                    if (data.response === 'success') {
-                        if (data && data.data) {
-                            localStorage.setItem('token', data.data);
+        return this._httpService.post('/api/login', body)
+            .pipe(
+                tap(
+                    (data: { data: any, response: string, response_message: Array<any> }) => {
+                        if (data.response === 'success') {
+                            if (data && data.data) {
+                                localStorage.setItem('token', data.data);
+                            }
+                            return data;
                         }
-                        return data;
-                    }
-                }),
-            catchError(error => Observable.throw(error || 'Internal server error'))
-        );
+                    }),
+                catchError(error => Observable.throw(error || 'Internal server error'))
+            );
     }
 
     isLoggedIn(): boolean {
