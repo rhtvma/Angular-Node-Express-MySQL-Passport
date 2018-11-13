@@ -83,10 +83,10 @@ getUserByUserID = (id, callback) => {
 passport.use(
     new LocalStrategy
     (
-        // { If your form contains diff name
-        //      usernameField: 'email',
-        //      passwordField: 'password'
-        // },
+        { //If your form contains diff name
+             usernameField: 'email',
+             passwordField: 'password'
+        },
         // {passReqToCallback: true},
         (username, password, done) => {
             console.log(`Login Step 2 :  Passport LocalStrategy`);

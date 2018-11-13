@@ -1,7 +1,3 @@
-/**
- * Created by rohit on 2018-03-30.
- */
-
 const fs = require('fs'),
     async = require('async'),
     util = require('util'),
@@ -118,7 +114,6 @@ exports.updateAutoUploaderCronState = (state, error, productID) => {
     });
 }
 /*
-
  */
 
 
