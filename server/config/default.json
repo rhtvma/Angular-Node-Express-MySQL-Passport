@@ -19,5 +19,8 @@
   "jwt": {
     "secret": "$Eldnub",
     "expiryInMiliseconds": 1000
-  }
+  },
+    "static": {
+      "port" : 3001
+    }
 }
