@@ -3,9 +3,9 @@ const LoginController = require('../controllers/login/loginCtr');
 const UsersController = require('../controllers/users');
 
 
-//http://localhost:3002/login
+//http://localhost:3001/login
 router.post('/login', LoginController.login);
-//http://localhost:3002/signup
+//http://localhost:3001/signup
 router.post('/signup', UsersController.signup);
 
 module.exports = router;
