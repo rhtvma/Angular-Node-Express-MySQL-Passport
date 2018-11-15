@@ -1,26 +1,26 @@
 {
-  "mysql": {
-    "connectionLimit": 5,
-    "host": "127.0.0.1",
-    "port": 3306,
-    "user": "root",
-    "password": "",
-    "database": "anemp"
-  },
-  "environment": {
-    "local": "localhost:4200"
-  },
-  "constants": {
-    "clientAuthSecretKey": "Hello RSA!",
-    "testEncryptedKey": "JDno0Y3oqJNgjwrzLMb0enA+OagAOvKXcol5DItoCO+P1oV6BKGU32D9Sd6ZqpUa3QfR/vi2+ihbDHwQV3zfcQ==",
-    "port": "8080",
-    "host": "http://localhost"
-  },
-  "jwt": {
-    "secret": "$Eldnub",
-    "expiryInMiliseconds": 1000
-  },
+    "mysql": {
+        "connectionLimit": 5,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "root",
+        "password": "",
+        "database": "anemp"
+    },
+    "environment": {
+        "local": "localhost:4200"
+    },
+    "constants": {
+        "clientAuthSecretKey": "Hello RSA!",
+        "testEncryptedKey": "JDno0Y3oqJNgjwrzLMb0enA+OagAOvKXcol5DItoCO+P1oV6BKGU32D9Sd6ZqpUa3QfR/vi2+ihbDHwQV3zfcQ==",
+        "port": "8080",
+        "host": "http://localhost"
+    },
+    "jwt": {
+        "secret": "$Eldnub",
+        "expiryInMiliseconds": 1000
+    },
     "static": {
-      "port" : 3001
+        "port": 3001
     }
 }

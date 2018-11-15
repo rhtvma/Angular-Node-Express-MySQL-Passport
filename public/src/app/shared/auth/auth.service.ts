@@ -18,7 +18,7 @@ export class AuthService {
 
 
     signupUser(body: any): Observable<any> {
-        return this._httpService.post('/api/signup', body);
+        return this._httpService.post('/signup', body);
     }
 
     signinUser(username: string, password: string): Observable<any> {
@@ -27,7 +27,7 @@ export class AuthService {
             'username': username,
             'password': password
         };
-        return this._httpService.post('/api/login', body)
+        return this._httpService.post('/login', body)
             .pipe(
                 tap(
                     (data: { data: any, response: string, response_message: Array<any> }) => {

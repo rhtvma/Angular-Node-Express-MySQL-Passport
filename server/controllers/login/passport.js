@@ -27,9 +27,16 @@ getUserByUsername = (email, callback) => {
 comparePassword = (candidatePassword, hash, callback) => {
     console.log(`Login Step 4 :  Password validation begins`);
     if (candidatePassword && hash) {
-        bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
-            if (err) throw err;
-            callback(null, isMatch);
+        bcrypt.hash(candidatePassword, 10, (err, hash) => {
+            if (err) {
+                throw err;
+            }
+            bcrypt.compare(candidatePassword, hash, (err, isMatch) => {
+                if (err) {
+                    throw err;
+                }
+                callback(null, isMatch);
+            });
         });
     } else {
         callback(null, null);
@@ -84,8 +91,8 @@ passport.use(
     new LocalStrategy
     (
         { //If your form contains diff name
-             usernameField: 'email',
-             passwordField: 'password'
+            usernameField: 'username',
+            passwordField: 'password'
         },
         // {passReqToCallback: true},
         (username, password, done) => {

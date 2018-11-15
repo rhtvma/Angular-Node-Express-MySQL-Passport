@@ -1,13 +1,13 @@
 var passport = require('passport');
 var jwt = require('jwt-simple');
 
-loginValidator =(body,cb)=>{
-let errorMsg=[];
-    if(body.email=='' || typeof body.email=='undefined'){
-        errorMsg.push({email:"Email is required"});
+loginValidator = (body, cb) => {
+    let errorMsg = [];
+    if (body.username == '' || typeof body.username == 'undefined') {
+        errorMsg.push({email: "Username is required"});
     }
-    if(body.password=='' || typeof body.password=='undefined'){
-        errorMsg.push({password:"Password is required"});
+    if (body.password == '' || typeof body.password == 'undefined') {
+        errorMsg.push({password: "Password is required"});
     }
 
     cb(errorMsg);
@@ -15,15 +15,15 @@ let errorMsg=[];
 
 module.exports.login = (req, res, next) => {
     console.log(`Login Step 1 :  process begins`);
-//Validation goes here
-    loginValidator(req.body,(err)=>{
-        if(err.length > 0){
+    //Validation goes here
+    loginValidator(req.body, (err) => {
+        if (err.length > 0) {
             return res.status(400).json({
-                err_message: null,
+                err_message: err,
                 response: "error",
-                response_message:err
+                response_message: "Inputs are not valid."
             });
-        }else{
+        } else {
             passport.authenticate('local', (err, user, info) => {
                 if (err) {
                     return next(err);
@@ -63,18 +63,16 @@ module.exports.login = (req, res, next) => {
             })(req, res, next);
         }
     });
-
-
 };
 
-generateJwt = (user, callback) =>{
-let userData = {
-    email : user.email,
-    first_name : user.first_name,
-    role : user.role,
-    username : user.username,
-    userID : user.userID
-}
+generateJwt = (user, callback) => {
+    let userData = {
+        email: user.email,
+        first_name: user.first_name,
+        role: user.role,
+        username: user.username,
+        userID: user.userID
+    }
 
     console.log(`Login Step 7 : GenerateJwt`);
     let userDetails = JSON.parse(JSON.stringify(userData));

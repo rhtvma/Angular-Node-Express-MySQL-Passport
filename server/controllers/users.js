@@ -9,22 +9,22 @@ const bcrypt = require('bcryptjs');
 const config = require('config');
 
 //Register Validation
-signupValidator =(body,cb)=>{
-    let errorMsg=[];
-    if(body.email=='' || typeof body.email=='undefined'){
-        errorMsg.push({email:"Email is required"});
+signupValidator = (body, cb) => {
+    let errorMsg = [];
+    if (body.email == '' || typeof body.email == 'undefined') {
+        errorMsg.push({email: "Email is required"});
     }
-    if(body.username=='' || typeof body.username=='undefined'){
-        errorMsg.push({username:"Username is required"});
+    if (body.username == '' || typeof body.username == 'undefined') {
+        errorMsg.push({username: "Username is required"});
     }
-    if(body.password=='' || typeof body.password=='undefined'){
-        errorMsg.push({password:"Password is required"});
+    if (body.password == '' || typeof body.password == 'undefined') {
+        errorMsg.push({password: "Password is required"});
     }
-    if(body.firstname=='' || typeof body.firstname=='undefined'){
-        errorMsg.push({firstname:"Firstname is required"});
+    if (body.firstname == '' || typeof body.firstname == 'undefined') {
+        errorMsg.push({firstname: "Firstname is required"});
     }
-    if(body.lastname=='' || typeof body.lastname=='undefined'){
-        errorMsg.push({lastname:"Lastname is required"});
+    if (body.lastname == '' || typeof body.lastname == 'undefined') {
+        errorMsg.push({lastname: "Lastname is required"});
     }
     cb(errorMsg);
 }
@@ -32,70 +32,70 @@ signupValidator =(body,cb)=>{
 // Register user via admin
 exports.signup = (req, res) => {
     console.log(`Admin Signup Step 1 :  process begins`);
-    signupValidator(req.body,(err)=> {
+    signupValidator(req.body, (err) => {
         if (err.length > 0) {
             return res.status(400).json({
-                err_message: null,
+                err_message: err,
                 response: "error",
-                response_message: err
+                response_message: "Inputs are not valid."
             });
         }
         else {
-        const email = req.body.email,
-            username = req.body.username,
-            password = req.body.password,
-            first_name = req.body.firstname,
-            last_name = req.body.lastname,
-            hash = bcrypt.hashSync(password, 10);
-        async.waterfall([
-                async.apply((callback) => {
-                    let insQuery = 'SELECT * FROM users WHERE email=?';
-                    DB.executeQuery(insQuery, [email], (err, rows) => {
-                        if (err) {
-                            callback({message: 'User already exists'}, null)
-                        } else {
-                            if (rows.length > 0) {
-                                callback(null, false)
-                            } else {
-                                callback(null, true)
-                            }
-                        }
-                    });
-                }),
-                async.apply((isUserValid, callback) => {
-                    if (isUserValid) {
-                        let insQuery = 'INSERT INTO users (email, username, hash, first_name,last_name) values (?,?,?,?,?)';
-                        DB.executeQuery(insQuery, [email, username, hash, first_name, last_name], (err, rows) => {
+            const email = req.body.email,
+                username = req.body.username,
+                password = req.body.password,
+                first_name = req.body.firstname,
+                last_name = req.body.lastname,
+                hash = bcrypt.hashSync(password, 10);
+            async.waterfall([
+                    async.apply((callback) => {
+                        let insQuery = 'SELECT * FROM users WHERE email=?';
+                        DB.executeQuery(insQuery, [email], (err, rows) => {
                             if (err) {
-                                callback({
-                                    data: err,
-                                    msg: err.message
-                                }, null)
+                                callback({message: 'User already exists'}, null)
                             } else {
-                                callback(null, rows)
+                                if (rows.length > 0) {
+                                    callback(null, false)
+                                } else {
+                                    callback(null, true)
+                                }
                             }
                         });
+                    }),
+                    async.apply((isUserValid, callback) => {
+                        if (isUserValid) {
+                            let insQuery = 'INSERT INTO users (email, username, hash, first_name,last_name) values (?,?,?,?,?)';
+                            DB.executeQuery(insQuery, [email, username, hash, first_name, last_name], (err, rows) => {
+                                if (err) {
+                                    callback({
+                                        data: err,
+                                        msg: err.message
+                                    }, null)
+                                } else {
+                                    callback(null, rows)
+                                }
+                            });
+                        } else {
+                            callback({message: 'User already exists'}, null)
+                        }
+                    })],
+                (err, result) => {
+                    if (err) {
+                        console.error('Account creation failed');
+                        res.status(400).json({
+                            err_message: err,
+                            response: "failed",
+                            response_message: "Account creation failed"
+                        });
                     } else {
-                        callback({message: 'User already exists'}, null)
+                        console.log('Account created successfully');
+                        res.status(200).json({
+                            data: result,
+                            response: "success",
+                            response_message: 'Account created successfully'
+                        });
                     }
-                })],
-            (err, result) => {
-                if (err) {
-                    console.error('Account creation failed');
-                    res.status(400).json({
-                        err_message: err,
-                        response: "failed",
-                        response_message: "Account creation failed"
-                    });
-                } else {
-                    console.log('Account created successfully');
-                    res.status(200).json({
-                        data: result,
-                        response: "success",
-                        response_message: 'Account created successfully'
-                    });
-                }
-            })
+                })
         }
     });
 }

@@ -93,8 +93,7 @@ app.use((err, req, res, next) => {
         }
     });
 });
-
 // let's start our server...
-const server = app.listen(process.env.PORT || config.static.port, () => {
+const server = app.listen(process.env.PORT || config.get('static').port, () => {
     console.log(`Server running at http://localhost:${server.address().port}/`);
 });
