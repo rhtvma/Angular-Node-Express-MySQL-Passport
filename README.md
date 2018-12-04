@@ -1,7 +1,7 @@
 # Angular-Routing-With-Lazy-Loading
 Angular-Routing-With-Lazy-Loading
 
-# Public (Front-End)
+# Public (Front-End) :  Angular 5
 
 This /public folder contains Angular code 
 
