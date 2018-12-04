@@ -1,7 +1,7 @@
 # Angular-Sidebar
-Angular-Sidebar
+Angular-Sidebar 
 
-# Public (Front-End)
+# Public (Front-End) : Angular 5
 
 This /public folder contains Angular code 
 
